@@ -16,13 +16,34 @@
                 return options[rnd_index];;
             }
             // string variable stores computer choice
+            let compChoice = getComputerChoice();
             // string variable stores input
             // create a user input with prompt()
-            // players input should be case sensitive
-            // the value gets stored in the variable
+            let playChoice = prompt("Rock, Paper or Scissors?");
+            
             // both variables should be checked with each other
-            // if its same return draw
-            // else rock wins against scissor, scissor wins against, ...
+            function playRound(playChoice, compChoice) {
+                let result = "";
+                // players input should be case sensitive
+                playChoice = playChoice.toLowerCase();
+                if(playChoice==="rock" && compChoice==="scissors") {
+                    result = "You Win! Rock beats scissors.";
+                }else if(playChoice==="scissors" && compChoice==="paper") {
+                    result = "You Win! Scissors beats paper.";
+                }else if(playChoice==="paper" && compChoice==="rock") {
+                    result = "You Win! Paper beats rock.";
+                }else if(compChoice==="rock" && playChoice==="scissors") {
+                    result = "You lost! Rock beats scissors.";
+                }else if(compChoice==="rock" && playChoice==="scissors") {
+                    result = "You lost! Rock beats scissors.";
+                }else if(compChoice==="rock" && playChoice==="scissors") {
+                    result = "You lose! Rock beats scissors.";
+                }else {
+                    result = "Draw!"
+                }
+
+                return result;
+            }
         </script>
     </body>
 </html>
