@@ -6,12 +6,17 @@
     </head>
     <body>
         <script>
-            // computer should randomly choose rock, paper or scisors
-            // Create Array with [rock,paper,scissors]
-            // chose random index
-            // return array-value of random index
-            // string variable stores input
+            // computer should randomly choose rock, paper or scissors
+            function getComputerChoice() {
+                // Create Array with [rock,paper,scissors]
+                const options = ["rock", "paper", "scissors"];
+                // chose random index
+                var rnd_index = Math.floor(Math.random() * 3);
+                // return array-value of random index
+                return options[rnd_index];;
+            }
             // string variable stores computer choice
+            // string variable stores input
             // create a user input with prompt()
             // players input should be case sensitive
             // the value gets stored in the variable
