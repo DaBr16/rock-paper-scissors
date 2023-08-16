@@ -37,48 +37,6 @@
                 }
                 return result;
             }
-
-            // create function game
-            function game() {
-                round = 1;
-                playerScore=0;
-                compScore=0;
-                while(round <= 5) {
-                    // string variable stores computer choice
-                    let compChoice = getComputerChoice();
-                    // create a user input with prompt()
-                    let playChoice = prompt("Rock, Paper or Scissors?");                
-                    // should run 5 times the playRound()
-                    if(playRound(playChoice, compChoice)==="You Win! Rock beats scissors."){
-                        playerScore++;
-                        round++;
-                    }else if(playRound(playChoice, compChoice)==="You Win! Scissors beats paper."){
-                        playerScore++;
-                        round++;
-                    }else if(playRound(playChoice, compChoice)==="You Win! Paper beats rock."){
-                        playerScore++;
-                        round++;
-                    }else if(playRound(playChoice, compChoice)==="You lost! Rock beats scissors."){
-                        compScore++;
-                        round++;
-                    }else if(playRound(playChoice, compChoice)==="You lost! Scissors beats paper."){
-                        compScore++;
-                        round++;
-                    }else if(playRound(playChoice, compChoice)==="You lost! Paper beats rock."){
-                        compScore++;
-                        round++;
-                    }else{
-                        round++;
-                    } 
-                }
-                if (playerScore > compScore){
-                    return "You won!"
-                }else if (compScore > playerScore){
-                    return "Computer won!"
-                }else{
-                    return "Draw!"
-                }
-            }
         </script>
     </body>
 </html>
