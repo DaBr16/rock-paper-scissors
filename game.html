@@ -3,40 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <title>Rock-Paper-Scissors</title>
+        <script src="game.js" defer></script>
     </head>
     <body>
-        <script>
-            // computer should randomly choose rock, paper or scissors
-            function getComputerChoice() {
-                // Create Array with [rock,paper,scissors]
-                const options = ["rock", "paper", "scissors"];
-                // chose random index
-                var rnd_index = Math.floor(Math.random() * 3);
-                // return array-value of random index
-                return options[rnd_index];;
-            }
-            // both variables should be checked with each other
-            function playRound(playChoice, compChoice) {
-                let result = "";
-                // players input should be case sensitive
-                playChoice = playChoice.toLowerCase();
-                if(playChoice==="rock" && compChoice==="scissors") {
-                    result = "You Win! Rock beats scissors.";
-                }else if(playChoice==="scissors" && compChoice==="paper") {
-                    result = "You Win! Scissors beats paper.";
-                }else if(playChoice==="paper" && compChoice==="rock") {
-                    result = "You Win! Paper beats rock.";
-                }else if(compChoice==="rock" && playChoice==="scissors") {
-                    result = "You lost! Rock beats scissors.";
-                }else if(compChoice==="scissors" && playChoice==="paper") {
-                    result = "You lost! Scissors beats paper.";
-                }else if(compChoice==="paper" && playChoice==="rock") {
-                    result = "You lost! Paper beats rock.";
-                }else {
-                    result = "Draw!"
-                }
-                return result;
-            }
-        </script>
+        <h1>Rock-Paper-Scissors</h1>
+        <button id="btn" value="rock" onclick="playRound()">Rock</button>
+        <button id="btn" value="paper" onclick="playRound()">Paper</button>
+        <button id="btn" value="scissors" onclick="playRound()">Scissors</button>
     </body>
 </html>
