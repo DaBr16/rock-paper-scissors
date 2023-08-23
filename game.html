@@ -4,14 +4,19 @@
         <meta charset="UTF-8">
         <title>Rock-Paper-Scissors</title>
         <script src="game.js" defer></script>
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <h1>Rock-Paper-Scissors</h1>
-        <button id="rock" onclick="playRound(this.id)">Rock</button>
-        <button id="paper" onclick="playRound(this.id)">Paper</button>
-        <button id="scissors" onclick="playRound(this.id)">Scissors</button>
+    <div class="bg">
         <div>
+            <h1 class="rainbow-text">Rock-Paper-Scissors</h1>
+        </div>
+        <div><button id="rock" onclick="playRound(this.id)">Rock</button></div>
+        <div><button id="paper" onclick="playRound(this.id)">Paper</button></div>
+        <div><button id="scissors" onclick="playRound(this.id)">Scissors</button></div>
+        <div class="announcement">
             <p></p>
         </div>
+    </div>
     </body>
 </html>
